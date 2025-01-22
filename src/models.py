@@ -18,7 +18,7 @@ class Usuario(Base):
     password = Column(String, nullable=False)
     nombre = Column(String, nullable=False)
     apellido = Column(String, nullable=False)
-    fecha_suscripcion = Column(DateTime, default=datetime.timezone.utc)
+    fecha_suscripcion = Column(DateTime, default=datetime.astimezone)
     
     favoritos = relationship("Favorito", back_populates="usuario")
 
